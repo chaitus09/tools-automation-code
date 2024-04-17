@@ -17,4 +17,4 @@ pipelines:
             terraform-apply:
               tasks:
                 - exec: {command: terraform, arguments: [ "init" ], run_if: passed}
-                - exec: {command: terraform, argunts: [ "apply", "-auto-approve" ], run_if: passed}
+                - exec: {command: terraform, arguments: [ "apply", "-auto-approve" ], run_if: passed}
