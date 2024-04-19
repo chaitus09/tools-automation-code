@@ -40,20 +40,20 @@ resource "aws_iam_role" "role" {
     ]
   })
 
-#  inline_policy {
-#    name = "${var.tool_name}-inline-policy"
-#
-#    policy = jsonencode({
-#      Version = "2012-10-17"
-#      Statement = [
-#        {
-#          Action   = concat(var.dummy_policy, var.policy_resource_list)
-#          Effect   = "Allow"
-#          Resource = "*"
-#        },
-#      ]
-#    })
-#  }
+  inline_policy {
+    name = "${var.tool_name}-inline-policy"
+
+    policy = jsonencode({
+      Version = "2012-10-17"
+      Statement = [
+        {
+          Action   = concat(var.dummy_policy, var.policy_resource_list)
+          Effect   = "Allow"
+          Resource = "*"
+        },
+      ]
+    })
+  }
 
   tags = {
     Name = "${var.tool_name}-role"
