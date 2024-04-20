@@ -7,7 +7,7 @@ resource "aws_instance" "instance" {
 
   tags = {
     Name    = var.tool_name
-    #    monitor = "yes"
+      monitor = "yes"
     #    env     = var.env
   }
 }
