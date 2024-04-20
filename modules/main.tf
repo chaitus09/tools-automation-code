@@ -15,10 +15,11 @@ resource "aws_instance" "instance" {
 
 
 resource "aws_route53_record" "record" {
-  name="${var.tool_name}-role"
+  name="${var.tool_name}-internal"
   type="A"
   zone_id=var.zone_id
   records = [aws_instance.instance.public_ip]
+ // records = [aws_instance.instance.private_ip] ..use it if u are providing dns record
   ttl=30
 
 }
