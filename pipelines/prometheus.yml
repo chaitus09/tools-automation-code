@@ -17,7 +17,7 @@ pipelines:
             ansible:
               tasks:
 
-                - exec: {command: ansible-playbook, arguments: [ "-i", "3.94.102.243,", "tools.yml", "-e", "tool_name=prometheus", "-e", "ansible_user=ec2-user", "-e", "ansible_password=DevOps321" ], run_if: passed}
+                - exec: {command: ansible-playbook, arguments: [ "-i", "54.235.16.55,", "tools.yml", "-e", "tool_name=prometheus", "-e", "ansible_user=ec2-user", "-e", "ansible_password=DevOps321" ], run_if: passed}
 
                 scrape_configs:
                   - job_name: "prometheus"
