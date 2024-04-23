@@ -5,6 +5,14 @@ resource "aws_instance" "instance" {
   #prometheus : adding IAM role to prometheus server
   iam_instance_profile   = aws_iam_instance_profile.instance_profile.name
 
+  instance_market_options {
+    market_type = "spot"
+    spot_options {
+      instance_interruption_behavior = "stop"
+      spot_instance_type             = "persistent"
+    }
+  }
+
   tags = {
     Name    = var.tool_name
       monitor = "yes"
