@@ -8,12 +8,12 @@ variable "tools" {
 
 grafana = {
   instance_type        = "t3.small"
-  policy_resource_list = ["ec2:DescribeInstances"]
+  policy_resources_list = []
 }
 
 vault = {
   instance_type        = "t3.small"
-  policy_resource_list = ["ec2:DescribeInstances"]
+  policy_resources_list = []
      }
  }
 }
