@@ -6,6 +6,17 @@ variable "tools" {
     }
   }
 }
+
+grafana = {
+  instance_type        = "t3.small"
+  policy_resource_list = []
+}
+
+vault = {
+  instance_type        = "t3.small"
+  policy_resource_list = []
+}
+
 variable "zone_id" {
   default= "Z1029901SH2BJPKJS7Q3"
 }
