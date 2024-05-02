@@ -4,9 +4,9 @@ data "aws_ami" "ami" {
   owners      = ["973714476881"]
 }
 
-#data "vault_generic_secret" "ssh" {
-#  path = "common/common"
-#}
+data "vault_generic_secret" "ssh" {
+  path = "common/username"   //path of the location in vault
+}
 
 data "aws_security_group" "selected"{
   name="allow-all"
