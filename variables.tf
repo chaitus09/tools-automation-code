@@ -1,21 +1,29 @@
 variable "tools" {
   default = {
-    prometheus  = {
+    prometheus = {
       instance_type         = "t3.small"
-      policy_resources_list =  ["ec2:DescribeInstances"]
+      policy_resources_list = ["ec2:DescribeInstances"]
     }
 
 
-grafana = {
-  instance_type        = "t3.small"
-  policy_resources_list = []
-}
+    grafana = {
+      instance_type         = "t3.small"
+      policy_resources_list = []
+    }
 
-vault = {
-  instance_type        = "t3.small"
-  policy_resources_list = []
-     }
- }
+    vault = {
+      instance_type         = "t3.small"
+      policy_resources_list = []
+    }
+
+
+    elk = {
+      instance_type        = "r7i.large"
+      policy_resource_list = []
+    }
+
+
+  }
 }
 
 variable "zone_id" {
